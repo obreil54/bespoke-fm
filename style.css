@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    width: 100%;
+    font-family: "Playfair Display", serif;
+}
+
+#home-page {
+    color: white;
+    background-image: url("home-background.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+
+#home-page i,
+#about-hero i,
+#process-hero i {
+    font-size: 4em;
+    margin: 16px;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#navbar-right a {
+    font-size: 2em;
+    margin-right: 16px;
+    width: 70%;
+}
+
+#navbar a {
+    object-fit: contain;
+    margin-left: 16px;
+    width: 10%;
+}
+
+a img {
+    width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#about-hero {
+    color: white;
+    background-image: url("about-hero.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+#about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 32px;
+    text-align: center;
+}
+
+#about-content div {
+    width: 50%;
+}
+
+#about-content img {
+    width: 30%;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 2em;
+}
+
+#about-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 32px;
+}
+
+#about-images img {
+    width: 20%;
+}
+
+#process-hero {
+    color: white;
+    background-image: url("process-hero.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-section,
+.process-section-reverse {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 32px;
+    text-align: center;
+}
+
+.process-section p {
+    font-size: 1.5em;
+}
+
+.process-section div {
+    width: 30%;
+}
+
+.process-section img {
+    width: 30%;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    display: none;
+}
+
+/* overlay & menu (hidden by default) */
+#scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: rgba(0, 0, 0, .45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease, visibility .2s;
+}
+
+#mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 2rem;
+    gap: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease, visibility .2s;
+    margin: 16px;
+}
+
+#mobile-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-open #scrim,
+.menu-open #mobile-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-open,
+.menu-open html {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    button {
+        display: block;
+    }
+
+    #navbar-right a {
+        display: none;
+    }
+
+    #navbar a {
+        width: 30%;
+    }
+
+    #about-content,
+    .process-section-reverse {
+        flex-direction: column-reverse;
+        margin: 16px;
+    }
+
+    #about-content div {
+        width: 90%;
+    }
+
+    #about-content img {
+        width: 70%;
+    }
+
+    #about-content p,
+    .process-section p,
+    .process-section-reverse p {
+        font-size: 1em;
+    }
+
+    #about-images {
+        flex-direction: column;
+    }
+
+    #about-images img {
+        width: 70%;
+        margin: 16px 0;
+    }
+
+    .process-section {
+        flex-direction: column;
+        margin: 16px;
+    }
+
+    .process-section div,
+    .process-section-reverse div {
+        width: 90%;
+    }
+
+    .process-section img,
+    .process-section-reverse img {
+        width: 70%;
+    }
+}
