@@ -8,6 +8,7 @@ body {
     color: white;
     background-image: url("home-background.png");
     background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -60,6 +61,7 @@ a {
     color: white;
     background-image: url("about-hero.png");
     background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -126,15 +128,18 @@ p {
     text-align: center;
 }
 
-.process-section p {
+.process-section p,
+.process-section-reverse p {
     font-size: 1.5em;
 }
 
-.process-section div {
+.process-section div,
+.process-section-reverse div {
     width: 30%;
 }
 
-.process-section img {
+.process-section img,
+.process-section-reverse img {
     width: 30%;
 }
 
@@ -188,6 +193,26 @@ button {
 .menu-open,
 .menu-open html {
     overflow: hidden;
+}
+
+#contact-page #navbar {
+    position: relative;
+}
+
+#contact-content h4,
+#contact-content p {
+    color: #513e2e;
+}
+
+#contact-content h4 {
+    font-size: 2em;
+}
+
+#contact-content {
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -245,5 +270,18 @@ button {
     .process-section img,
     .process-section-reverse img {
         width: 70%;
+    }
+
+    #contact-content {
+        flex-direction: column;
+        margin: 16px;
+    }
+
+    #contact-content div {
+        width: 90%;
+    }
+
+    #contact-content p {
+        font-size: 1.5em;
     }
 }
