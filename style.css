@@ -8,7 +8,7 @@ body {
     color: white;
     background-image: url("home-background.png");
     background-size: cover;
-    background-position: center;
+    background-position: 50% 20%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@ a {
     color: white;
     background-image: url("about-hero.png");
     background-size: cover;
-    background-position: center;
+    background-position: 50% 30%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -145,6 +145,8 @@ p {
 .process-section img,
 .process-section-reverse img {
     width: 30%;
+    height: 835px;
+    object-fit: cover;
 }
 
 button {
@@ -202,10 +204,17 @@ button {
     position: relative;
 }
 
-#contact-content h4,
-#contact-content p,
-#contact-content p a {
-    color: #513e2e;
+#contact-page #navbar a {
+    color: black;
+}
+
+#contact-content a {
+    color: black;
+}
+
+#contact-content a i {
+    font-size: 3em;
+    margin-right: 8px;
 }
 
 #contact-content h4 {
@@ -222,7 +231,7 @@ button {
     min-height: 85vh;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 @media (max-width: 768px) {
@@ -279,7 +288,9 @@ button {
 
     .process-section img,
     .process-section-reverse img {
-        width: 70%;
+        width: 80%;
+        height: 418px;
+        object-fit: cover;
     }
 
     #contact-content {
