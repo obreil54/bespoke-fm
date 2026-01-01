@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     width: 100%;
@@ -151,9 +147,9 @@ p {
     object-fit: cover;
 }
 
-#process-final {
-    object-fit: cover;
-    object-position: 80% 50%;
+#process-final img {
+    object-position: bottom;
+    border: 5px solid black;
 }
 
 button {
@@ -290,7 +286,7 @@ button {
     }
 
     #process-hero {
-        background-position: 35% 50%;
+        background-position: center;
     }
 
     .process-section div,
