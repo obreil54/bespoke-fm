@@ -10,12 +10,5 @@ function toggleMenu(force) {
     scrim.hidden = mobileMenu.hidden = !open;
 }
 
-mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        toggleMenu(false);
-    });
-});
-
-
 burger.addEventListener('click', () => toggleMenu());
 closeMenu.addEventListener('click', () => toggleMenu(false));
